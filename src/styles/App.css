@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(42, 42, 42);
+}
+
+@keyframes slide {
+  from {
+    margin-top: 500px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Akshar", sans-serif;
+  color: rgb(230, 230, 230);
+}
+
+.inputForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userInput {
+  font-size: 30px;
+  font-family: "Akshar", sans-serif;
+}
+
+.weatherBtn {
+  font-size: 29px;
+}
+
+.weatherBtn:hover {
+  background-color: rgb(187, 183, 183);
+}
+
+.section {
+  padding-top: 35px;
+}
+
+.subsection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Akshar", sans-serif;
+  font-size: 30px;
+  color: rgb(230, 230, 230);
+}
+
+.temp {
+  font-size: 55px;
+}
+
+.feelsLike {
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.humidity {
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.footer {
+  bottom: 0;
+  position: absolute;
+  font-family: "Akshar", sans-serif;
+  color: rgb(230, 230, 230);
+  font-size: 20px;
+}
+
+.hidden {
+  visibility: hidden;
+}
