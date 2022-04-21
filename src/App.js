@@ -5,6 +5,7 @@ import Footer from "./components/footer";
 import "./styles/App.css";
 
 function App() {
+  const [isLoading, setIsLoading] = useState("true");
   const [userInput, setUserInput] = useState("");
   const [weatherData, setWeatherData] = useState({
     city: "",
@@ -25,9 +26,6 @@ function App() {
   };
 
   const handleClick = (e) => {
-    const section = document.querySelector(".section");
-    section.classList.remove("hidden");
-    section.style.transition = "1s";
     e.preventDefault();
 
     setUserInput("");
@@ -42,6 +40,7 @@ function App() {
         return response.json();
       })
       .then(function (response) {
+        setIsLoading(false);
         setWeatherData({
           city: response.name,
           desc: response.weather[0].description.toUpperCase(),
@@ -71,6 +70,7 @@ function App() {
         </button>
       </form>
       <Main
+        isLoading={isLoading}
         city={weatherData.city}
         desc={weatherData.desc}
         temp={weatherData.temp}
