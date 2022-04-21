@@ -4,15 +4,16 @@
 
 body {
   background-color: rgb(42, 42, 42);
+  transition: 1s;
 }
 
 @keyframes slide {
   from {
-    margin-top: 500px;
+    margin-left: 500px;
     opacity: 0;
   }
   to {
-    margin-top: 0;
+    margin-left: 0;
     opacity: 1;
   }
 }
@@ -32,12 +33,14 @@ body {
   flex-direction: column;
   font-family: "Akshar", sans-serif;
   color: rgb(230, 230, 230);
+  animation: slide 0.6s;
 }
 
 .inputForm {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: slide 0.9s;
 }
 
 .userInput {
@@ -55,6 +58,8 @@ body {
 
 .section {
   padding-top: 35px;
+  opacity: 1;
+  transition: 1s;
 }
 
 .subsection {
@@ -90,4 +95,5 @@ body {
 
 .hidden {
   visibility: hidden;
+  opacity: 0;
 }
