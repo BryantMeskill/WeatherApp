@@ -3,7 +3,9 @@ const Footer = () => {
   return (
     <div className="footer">
       <span>
-        <img src={logo} alt="GitHub logo"></img>
+        <a href="https://github.com/BryantMeskill">
+          <img src={logo} alt="GitHub logo"></img>
+        </a>
         /BryantMeskill
       </span>
     </div>
