@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "./components/header";
 import Main from "./components/main";
 import Footer from "./components/footer";
+import logo from "../src/img/openweather.png";
 import "./styles/App.css";
 
 function App() {
@@ -61,6 +62,7 @@ function App() {
         <input
           name="userInput"
           className="userInput"
+          placeholder="Please enter your zip code!"
           value={userInput}
           onChange={handleInputChange}
           onKeyPress={handleKeyPress}
@@ -69,6 +71,12 @@ function App() {
           ✔️
         </button>
       </form>
+      <div className={`logoContainer ${isLoading ? "" : "logoHidden"}`}>
+        Powered By:
+        <a href="https://openweathermap.org/">
+          <img class="weatherLogo" src={logo} alt="Open Weather logo"></img>
+        </a>
+      </div>
       <Main
         isLoading={isLoading}
         city={weatherData.city}
